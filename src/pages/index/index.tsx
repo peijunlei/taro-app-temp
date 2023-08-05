@@ -4,26 +4,15 @@ import bg from '@/assets/image/bg.png';
 
 import './index.less'
 
-export default class Index extends Component<PropsWithChildren> {
+const bg2 = require('@/assets/image/bg.png');
 
-  componentWillMount() { }
-
-  componentDidMount() { 
-    console.log('componentDidMount',ossHost);
-    
-  }
-
-  componentWillUnmount() { }
-
-  componentDidShow() { }
-
-  componentDidHide() { }
-
-  render() {
-    return (
-      <View className='index'>
-        <Image src={bg} style={{ width: 200, height: 200 }} />
-      </View>
-    )
-  }
+export default function Index(){
+  return (
+    <View className='index'>
+      <Image src={bg} style={{ width: 200, height: 200 }} />
+      <Image src={bg2} style={{ width: 200, height: 200 }} />
+      <Image src={require('@/assets/image/bg.png')} style={{ width: 200, height: 200 }} />
+    </View>
+  )
 }
+
